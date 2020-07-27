@@ -1,0 +1,7 @@
+{
+  "name": "Jointly",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
