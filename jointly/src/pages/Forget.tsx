@@ -12,23 +12,22 @@ import {
   IonIcon,
  IonButton, IonTitle, IonFooter, IonToolbar
 } from "@ionic/react";
-import { shieldCheckmarkOutline, personAddOutline, helpBuoyOutline, logInOutline, keyOutline, atOutline } from "ionicons/icons"
-//import ExploreContainer from '../components/ExploreContainer';
-import "./Login.css";
+import { personAddOutline, logInOutline, atOutline, cogOutline, lockOpenOutline } from "ionicons/icons"
+import "./Forget.css";
 
-const Login: React.FC = () => {
+const Forget: React.FC = () => {
   return (
     <IonPage className="ion-padding-top">
       <IonContent>
         <IonGrid>
           <IonRow>
             <IonCol className="ion-text-center ion-padding-top ion-padding-bottom">
-              <IonIcon size="large" color="primary" className="loginIconBig" icon={shieldCheckmarkOutline}></IonIcon>
+              <IonIcon size="large" color="primary" className="loginIconBig" icon={lockOpenOutline}></IonIcon>
             </IonCol>
           </IonRow>
           <IonRow>
             <IonCol>
-              <IonTitle className="ion-text-center ion-text-uppercase ion-padding-bottom" size="large" color="danger">Joint.ly</IonTitle>
+              <IonTitle className="ion-text-center ion-padding-bottom" size="large" color="medium">Don’t panic! we are here to help</IonTitle>
             </IonCol>
           </IonRow>
           <IonRow>
@@ -41,17 +40,10 @@ const Login: React.FC = () => {
                     </IonLabel>
                   <IonInput type="email"></IonInput>
                 </IonItem>
-                <IonItem>
-                  <IonLabel position="floating">
-                    <IonIcon color="primary" slot="start" icon={keyOutline}></IonIcon>
-                    Password
-                    </IonLabel>
-                  <IonInput type="password"></IonInput>
-                </IonItem>
               </IonList>
               <IonButton size="large" expand="block">
-                <IonIcon slot="start" icon={logInOutline}></IonIcon>
-                Login
+                <IonIcon slot="start" icon={cogOutline}></IonIcon>
+                Retrive
                 </IonButton>
             </IonCol>
           </IonRow>
@@ -63,13 +55,13 @@ const Login: React.FC = () => {
             <IonIcon slot="start" icon={personAddOutline}></IonIcon>
             Register
             </IonButton>
-          <IonButton slot="start" fill="clear" color="medium">
-            <IonIcon slot="start" icon={helpBuoyOutline}></IonIcon>
-            Forget
+          <IonButton slot="start" fill="clear" color="success">
+            <IonIcon slot="start" icon={logInOutline}></IonIcon>
+            Login
             </IonButton>
         </IonToolbar>
       </IonFooter>
     </IonPage>
   );
 };
-export default Login;
+export default Forget;
