@@ -1,7 +1,31 @@
-import React from 'react';
-import { IonFooter, IonInput, IonButton, IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonGrid, IonCol, IonRow, IonIcon, IonList, IonItem, IonLabel, IonButtons } from '@ionic/react';
-import { personAddOutline,  keyOutline, atOutline, arrowForwardCircleOutline, medalOutline } from "ionicons/icons"
-import './Register.css';
+import React from "react";
+import {
+  IonFooter,
+  IonInput,
+  IonButton,
+  IonContent,
+  IonHeader,
+  IonPage,
+  IonTitle,
+  IonToolbar,
+  IonGrid,
+  IonCol,
+  IonRow,
+  IonIcon,
+  IonList,
+  IonItem,
+  IonLabel,
+  IonButtons,
+} from "@ionic/react";
+import {
+  personAddOutline,
+  keyOutline,
+  atOutline,
+  arrowForwardCircleOutline,
+  medalOutline,
+  personOutline
+} from "ionicons/icons";
+import "./Register.css";
 
 const Register: React.FC = () => {
   return (
@@ -20,12 +44,19 @@ const Register: React.FC = () => {
         <IonGrid>
           <IonRow>
             <IonCol className="ion-text-center ion-padding-top ion-padding-bottom">
-              <IonIcon size="large" color="primary" className="loginIconBig" icon={medalOutline}></IonIcon>
+              <IonIcon
+                size="large"
+                color="primary"
+                className="loginIconBig"
+                icon={medalOutline}
+              ></IonIcon>
             </IonCol>
           </IonRow>
           <IonRow>
             <IonCol>
-              <IonTitle className="ion-text-center ion-padding-bottom" >Jahid invite you to Joint.ly</IonTitle>
+              <IonTitle className="ion-text-center ion-padding-bottom">
+                Jahid invite you to Joint.ly
+              </IonTitle>
             </IonCol>
           </IonRow>
           <IonRow>
@@ -33,24 +64,55 @@ const Register: React.FC = () => {
               <IonList>
                 <IonItem>
                   <IonLabel position="floating">
-                    <IonIcon color="primary" slot="start" icon={atOutline}></IonIcon>
-                    Your Email
-                    </IonLabel>
-                  <IonInput disabled={true} type="email" value="rahat@gmail.com"></IonInput>
+                    <IonIcon
+                      color="primary"
+                      slot="start"
+                      icon={personOutline}
+                    ></IonIcon>
+                    Type your name
+                  </IonLabel>
+                  <IonInput type="text"></IonInput>
                 </IonItem>
                 <IonItem>
                   <IonLabel position="floating">
-                    <IonIcon color="primary" slot="start" icon={keyOutline}></IonIcon>
+                    <IonIcon
+                      color="primary"
+                      slot="start"
+                      icon={atOutline}
+                    ></IonIcon>
+                    Your Email
+                  </IonLabel>
+                  <IonInput
+                    disabled={true}
+                    type="email"
+                    value="rahat@gmail.com"
+                  ></IonInput>
+                </IonItem>
+                <IonItem>
+                  <IonLabel position="floating">
+                    <IonIcon
+                      color="primary"
+                      slot="start"
+                      icon={keyOutline}
+                    ></IonIcon>
                     Choose a Password
-                    </IonLabel>
+                  </IonLabel>
                   <IonInput type="password"></IonInput>
                 </IonItem>
                 <IonItem>
                   <IonLabel position="floating">
-                    <IonIcon color="primary" slot="start" icon={keyOutline}></IonIcon>
-                    <IonIcon color="primary" slot="start" icon={keyOutline}></IonIcon>
+                    <IonIcon
+                      color="primary"
+                      slot="start"
+                      icon={keyOutline}
+                    ></IonIcon>
+                    <IonIcon
+                      color="primary"
+                      slot="start"
+                      icon={keyOutline}
+                    ></IonIcon>
                     Retype the Password
-                    </IonLabel>
+                  </IonLabel>
                   <IonInput type="password"></IonInput>
                 </IonItem>
               </IonList>
@@ -58,12 +120,12 @@ const Register: React.FC = () => {
           </IonRow>
         </IonGrid>
       </IonContent>
-      <IonFooter >
+      <IonFooter>
         <IonToolbar>
           <IonButton slot="end" className="ion-margin-end" color="primary">
             <IonIcon slot="end" icon={arrowForwardCircleOutline}></IonIcon>
-            Next
-            </IonButton>
+            Go
+          </IonButton>
         </IonToolbar>
       </IonFooter>
     </IonPage>

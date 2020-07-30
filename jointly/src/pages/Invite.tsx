@@ -20,7 +20,7 @@ import {
   IonCardSubtitle,
   IonCardTitle,
   IonButtons,
-  IonHeader
+  IonHeader,
 } from "@ionic/react";
 import {
   shieldCheckmarkOutline,
@@ -33,7 +33,10 @@ import {
   wifi,
   wine,
   warning,
-  walk
+  walk,
+  gitCompareOutline,
+  gitMergeOutline,
+  flowerOutline
 } from "ionicons/icons";
 import "./Invite.css";
 
@@ -44,60 +47,43 @@ const Invite: React.FC = () => {
         <IonToolbar>
           <IonButtons slot="start">
             <IonButton>
-              <IonIcon icon={personAddOutline}></IonIcon>
+              <IonIcon icon={gitCompareOutline}></IonIcon>
             </IonButton>
           </IonButtons>
-          <IonTitle className="no-left-padding no-weight">Register</IonTitle>
+          <IonTitle className="no-left-padding no-weight">
+            Invaitation Required
+          </IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent>
-        <IonCard>
+        <IonCard className="ion-text-center ">
+          <IonIcon
+            size="large"
+            color="primary"
+            className="loginIconBig"
+            icon={gitMergeOutline}
+          ></IonIcon>
           <IonCardHeader>
-            <IonCardSubtitle>Card Subtitle</IonCardSubtitle>
-            <IonCardTitle>Card Title</IonCardTitle>
+            <IonCardSubtitle className="ion">Welcome</IonCardSubtitle>
+            <IonCardTitle>Joint.ly for people like you</IonCardTitle>
           </IonCardHeader>
-
           <IonCardContent>
-            Keep close to Nature's heart... and break clear away, once in
-            awhile, and climb a mountain or spend a week in the woods. Wash your
-            spirit clean.
+            At the moment we only accept registration by community invaitation.
+            If you know someone please communicate with hin to send you a
+            reference link.
           </IonCardContent>
         </IonCard>
 
-        <IonCard>
-          <IonItem>
-            <IonIcon icon={pin} slot="start" />
-            <IonLabel>ion-item in a card, icon left, button right</IonLabel>
-            <IonButton fill="outline" slot="end">
-              View
-            </IonButton>
-          </IonItem>
-
-          <IonCardContent>
-            This is content, without any paragraph or header tags, within an
-            ion-cardContent element.
-          </IonCardContent>
-        </IonCard>
-        <IonCard>
-          <IonItem href="#" className="ion-activated">
-            <IonIcon icon={wifi} slot="start" />
-            <IonLabel>Card Link Item 1 activated</IonLabel>
-          </IonItem>
-
-          <IonItem href="#">
-            <IonIcon icon={wine} slot="start" />
-            <IonLabel>Card Link Item 2</IonLabel>
-          </IonItem>
-
-          <IonItem className="ion-activated">
-            <IonIcon icon={warning} slot="start" />
-            <IonLabel>Card Button Item 1 activated</IonLabel>
-          </IonItem>
-
-          <IonItem>
-            <IonIcon icon={walk} slot="start" />
-            <IonLabel>Card Button Item 2</IonLabel>
-          </IonItem>
+        <IonCard className="ion-text-center">
+          <IonIcon
+            size="large"
+            color="success"
+            className="loginIconBig"
+            icon={flowerOutline}
+          ></IonIcon>
+          <IonCardHeader>
+            <IonCardTitle>Joint.ly is all about trust and social banking</IonCardTitle>
+          </IonCardHeader>
         </IonCard>
       </IonContent>
       <IonFooter>
