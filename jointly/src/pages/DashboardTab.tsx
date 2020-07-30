@@ -1,53 +1,36 @@
 import React from "react";
 import {
   IonContent,
+  IonHeader,
   IonPage,
-  IonGrid,
-  IonCol,
-  IonRow,
-  IonLabel,
-  IonInput,
-  IonItem,
-  IonList,
-  IonIcon,
-  IonButton,
   IonTitle,
-  IonFooter,
   IonToolbar,
   IonCard,
-  IonCardContent,
+  IonCardTitle,
   IonCardHeader,
   IonCardSubtitle,
-  IonCardTitle,
-  IonButtons,
-  IonHeader
+  IonCardContent,
+  IonItem,
+  IonIcon,
+  IonLabel,
+  IonButton,
+  IonButtons
 } from "@ionic/react";
-import {
-  shieldCheckmarkOutline,
-  personAddOutline,
-  helpBuoyOutline,
-  logInOutline,
-  keyOutline,
-  atOutline,
-  pin,
-  wifi,
-  wine,
-  warning,
-  walk
-} from "ionicons/icons";
-import "./Invite.css";
+import { pin, wifi, wine, warning, walk, homeOutline } from "ionicons/icons";
 
-const Invite: React.FC = () => {
+import "./DashboardTab.css";
+
+const DashboardTab: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
           <IonButtons slot="start">
             <IonButton>
-              <IonIcon icon={personAddOutline}></IonIcon>
+              <IonIcon icon={homeOutline}></IonIcon>
             </IonButton>
           </IonButtons>
-          <IonTitle className="no-left-padding no-weight">Register</IonTitle>
+          <IonTitle className="no-left-padding no-weight">Home</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent>
@@ -100,19 +83,8 @@ const Invite: React.FC = () => {
           </IonItem>
         </IonCard>
       </IonContent>
-      <IonFooter>
-        <IonToolbar>
-          <IonButton href="/login" slot="end" fill="clear" color="primary">
-            <IonIcon slot="start" icon={personAddOutline}></IonIcon>
-            Login
-          </IonButton>
-          <IonButton href="/forget" slot="start" fill="clear" color="medium">
-            <IonIcon slot="start" icon={helpBuoyOutline}></IonIcon>
-            Forget
-          </IonButton>
-        </IonToolbar>
-      </IonFooter>
     </IonPage>
   );
 };
-export default Invite;
+
+export default DashboardTab;

@@ -9,35 +9,35 @@ import {
   IonTabButton,
   IonTabs
 } from '@ionic/react';
-import { ellipse, square, triangle } from 'ionicons/icons';
+import {  flowerOutline, menuOutline, homeOutline } from 'ionicons/icons';
 import { IonPage } from '@ionic/react';
 import './Home.css';
-import Tab1 from './Tab1';
-import Tab2 from './Tab2';
-import Tab3 from './Tab3';
+import DashboardTab from './DashboardTab';
+import FlowerTab from './FlowerTab';
+import MenuTab from './MenuTab';
 const Home: React.FC = () => {
   return (
     <IonPage>
       <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
-          <Route path="/tab1" component={Tab1} exact={true} />
-          <Route path="/tab2" component={Tab2} exact={true} />
-          <Route path="/tab3" component={Tab3} />   
-          <Route path="/home" render={() => <Redirect to="/tab1" />} exact={true} />       
+          <Route path="/dashboard" component={DashboardTab} exact={true} />
+          <Route path="/flower" component={FlowerTab} exact={true} />
+          <Route path="/menu" component={MenuTab} />   
+          <Route path="/home" render={() => <Redirect to="/dashboard" />} exact={true} />       
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
-          <IonTabButton tab="tab1" href="/tab1">
-            <IonIcon icon={triangle} />
-            <IonLabel>Tab 1</IonLabel>
+          <IonTabButton tab="dashboard" href="/dashboard">
+            <IonIcon icon={homeOutline} />
+            <IonLabel>Home</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="tab2" href="/tab2">
-            <IonIcon icon={ellipse} />
-            <IonLabel>Tab 2</IonLabel>
+          <IonTabButton tab="flower" href="/flower">
+            <IonIcon icon={flowerOutline} />
+            <IonLabel>Board</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="tab3" href="/tab3">
-            <IonIcon icon={square} />
-            <IonLabel>Tab 3</IonLabel>
+          <IonTabButton tab="menu" href="/menu">
+            <IonIcon icon={menuOutline} />
+            <IonLabel>Menu</IonLabel>
           </IonTabButton>
         </IonTabBar>
       </IonTabs>

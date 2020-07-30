@@ -49,7 +49,7 @@ const Login: React.FC = () => {
                   <IonInput type="password"></IonInput>
                 </IonItem>
               </IonList>
-              <IonButton size="large" expand="block">
+              <IonButton href="/home" size="large" expand="block">
                 <IonIcon slot="start" icon={logInOutline}></IonIcon>
                 Login
                 </IonButton>
@@ -59,11 +59,11 @@ const Login: React.FC = () => {
       </IonContent>
       <IonFooter>
         <IonToolbar>
-          <IonButton slot="end" fill="clear" color="primary">
+          <IonButton href="/invite" slot="end" fill="clear" color="primary">
             <IonIcon slot="start" icon={personAddOutline}></IonIcon>
             Register
             </IonButton>
-          <IonButton slot="start" fill="clear" color="medium">
+          <IonButton href="/forget" slot="start" fill="clear" color="medium">
             <IonIcon slot="start" icon={helpBuoyOutline}></IonIcon>
             Forget
             </IonButton>

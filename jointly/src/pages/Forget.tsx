@@ -51,13 +51,13 @@ const Forget: React.FC = () => {
       </IonContent>
       <IonFooter>
         <IonToolbar>
-          <IonButton slot="end" fill="clear" color="primary">
+          <IonButton href="/invite" slot="end" fill="clear" color="primary">
             <IonIcon slot="start" icon={personAddOutline}></IonIcon>
             Register
             </IonButton>
-          <IonButton slot="start" fill="clear" color="success">
+          <IonButton href="/login" slot="start" fill="clear" color="success">
             <IonIcon slot="start" icon={logInOutline}></IonIcon>
-            Login
+            Back to Login
             </IonButton>
         </IonToolbar>
       </IonFooter>
