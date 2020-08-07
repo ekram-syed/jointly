@@ -8,6 +8,7 @@ import {
   IonButtons,
   IonButton,
   IonIcon,
+  IonLabel, IonCard, IonImg
 } from "@ionic/react";
 import { pin, wifi, wine, warning, walk, flowerOutline } from "ionicons/icons";
 import "./FlowerTab.css";
@@ -26,11 +27,9 @@ const FlowerTab: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Tab 2</IonTitle>
-          </IonToolbar>
-        </IonHeader>
+        <IonCard>
+          <IonImg src="./assets/board-back.png"></IonImg>
+        </IonCard>
       </IonContent>
     </IonPage>
   );

@@ -15,6 +15,7 @@ import './Home.css';
 import DashboardTab from './DashboardTab';
 import FlowerTab from './FlowerTab';
 import MenuTab from './MenuTab';
+import Profile from './Profile';
 const Home: React.FC = () => {
   return (
     <IonPage>
@@ -24,6 +25,7 @@ const Home: React.FC = () => {
           <Route path="/dashboard" component={DashboardTab} exact={true} />
           <Route path="/flower" component={FlowerTab} exact={true} />
           <Route path="/menu" component={MenuTab} />   
+          <Route path="/profile" component={Profile} />   
           <Route path="/home" render={() => <Redirect to="/dashboard" />} exact={true} />       
         </IonRouterOutlet>
         <IonTabBar slot="bottom">

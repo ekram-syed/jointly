@@ -14,10 +14,28 @@ import {
   IonIcon,
   IonLabel,
   IonButton,
-  IonButtons
+  IonButtons,
+  IonAvatar,
+  IonImg,
+  IonBadge,
+  IonChip,
+  IonList,
+  IonListHeader,
 } from "@ionic/react";
-import { pin, wifi, wine, warning, walk, homeOutline } from "ionicons/icons";
-
+import {
+  pin,
+  wifi,
+  wine,
+  warning,
+  walk,
+  homeOutline,
+  bonfireOutline,
+  flowerOutline,
+  arrowUpCircleOutline,
+  gitMergeOutline,
+  personAddOutline,
+  addCircleOutline
+} from "ionicons/icons";
 import "./DashboardTab.css";
 
 const DashboardTab: React.FC = () => {
@@ -34,53 +52,86 @@ const DashboardTab: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent>
-        <IonCard>
+        <IonCard color="primary">
           <IonCardHeader>
-            <IonCardSubtitle>Card Subtitle</IonCardSubtitle>
-            <IonCardTitle>Card Title</IonCardTitle>
+            <IonItem color="primary" lines="full">
+              <IonAvatar slot="start">
+                <IonImg src="./assets/avatar.svg"></IonImg>
+              </IonAvatar>
+              <IonCardTitle>Emon Ekram</IonCardTitle>
+            </IonItem>
+            <IonCardSubtitle>Joined: April 20, 2020</IonCardSubtitle>
+            <IonCardTitle>
+              Current Board:
+              <IonChip color="light" outline={true}>
+                <IonIcon icon={flowerOutline} />
+                <IonLabel>#65</IonLabel>
+              </IonChip>
+            </IonCardTitle>
+
+            <IonCardTitle>
+              Stage: <IonBadge color="success">FIRE</IonBadge>{" "}
+              <IonBadge color="light"> AIR </IonBadge>{" "}
+              <IonBadge color="light"> EARTH </IonBadge>{" "}
+              <IonBadge color="light"> WATER </IonBadge>{" "}
+            </IonCardTitle>
           </IonCardHeader>
+        </IonCard>
+
+        <IonCard>
+          <IonItem lines="full">
+            <IonIcon
+              color="primary"
+              size="large"
+              icon={arrowUpCircleOutline}
+              slot="start"
+            />
+            <IonLabel>UPLINK</IonLabel>
+          </IonItem>
 
           <IonCardContent>
-            Keep close to Nature's heart... and break clear away, once in
-            awhile, and climb a mountain or spend a week in the woods. Wash your
-            spirit clean.
+            <IonItem lines="none">
+              <IonAvatar slot="start">
+                <IonImg src="./assets/avatar.svg"></IonImg>
+              </IonAvatar>
+              <IonLabel>Arman A</IonLabel>
+              <IonChip color="danger" outline={true}>
+                <IonIcon icon={bonfireOutline} />
+                <IonLabel>FIRE</IonLabel>
+              </IonChip>
+            </IonItem>
           </IonCardContent>
         </IonCard>
 
         <IonCard>
-          <IonItem>
-            <IonIcon icon={pin} slot="start" />
-            <IonLabel>ion-item in a card, icon left, button right</IonLabel>
-            <IonButton fill="outline" slot="end">
-              View
-            </IonButton>
+          <IonItem lines="full">
+            <IonIcon
+              color="primary"
+              size="large"
+              icon={gitMergeOutline}
+              slot="start"
+            />
+            <IonLabel>DOWN LINKS</IonLabel>
           </IonItem>
-
           <IonCardContent>
-            This is content, without any paragraph or header tags, within an
-            ion-cardContent element.
+            <IonItem lines="none">
+              <IonAvatar slot="start">
+                <IonImg src="./assets/avatar.svg"></IonImg>
+              </IonAvatar>
+              <IonLabel>Jahid J</IonLabel>
+              <IonChip color="danger" outline={true}>
+                <IonIcon icon={bonfireOutline} />
+                <IonLabel>FIRE</IonLabel>
+              </IonChip>
+            </IonItem>
+
+            
+              <IonButton expand="block" color="primary">
+                <IonIcon slot="start" icon={personAddOutline}></IonIcon>
+                Invite
+              </IonButton>
+          
           </IonCardContent>
-        </IonCard>
-        <IonCard>
-          <IonItem href="#" className="ion-activated">
-            <IonIcon icon={wifi} slot="start" />
-            <IonLabel>Card Link Item 1 activated</IonLabel>
-          </IonItem>
-
-          <IonItem href="#">
-            <IonIcon icon={wine} slot="start" />
-            <IonLabel>Card Link Item 2</IonLabel>
-          </IonItem>
-
-          <IonItem className="ion-activated">
-            <IonIcon icon={warning} slot="start" />
-            <IonLabel>Card Button Item 1 activated</IonLabel>
-          </IonItem>
-
-          <IonItem>
-            <IonIcon icon={walk} slot="start" />
-            <IonLabel>Card Button Item 2</IonLabel>
-          </IonItem>
         </IonCard>
       </IonContent>
     </IonPage>

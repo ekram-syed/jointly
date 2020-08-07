@@ -26,6 +26,7 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 import Forget from './pages/Forget';
+import Profile from './pages/Profile';
 
 const App: React.FC = () => (
   <IonApp>
@@ -35,6 +36,7 @@ const App: React.FC = () => (
       <Route path="/forget" component={Forget} exact={true} />
       <Route path="/invite" component={Invite} exact={true} />
       <Route path="/home" component={Home} exact={true} />
+      <Route path="/profile" component={Profile} exact={true} />
       <Route path="/" render={() => <Redirect to="/login" />} exact={true} />      
     </IonReactRouter>
   </IonApp>
