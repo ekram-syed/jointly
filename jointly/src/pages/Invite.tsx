@@ -2,13 +2,6 @@ import React from "react";
 import {
   IonContent,
   IonPage,
-  IonGrid,
-  IonCol,
-  IonRow,
-  IonLabel,
-  IonInput,
-  IonItem,
-  IonList,
   IonIcon,
   IonButton,
   IonTitle,
@@ -23,21 +16,13 @@ import {
   IonHeader,
 } from "@ionic/react";
 import {
-  shieldCheckmarkOutline,
   personAddOutline,
   helpBuoyOutline,
-  logInOutline,
-  keyOutline,
-  atOutline,
-  pin,
-  wifi,
-  wine,
-  warning,
-  walk,
   gitCompareOutline,
   gitMergeOutline,
   flowerOutline
 } from "ionicons/icons";
+
 import "./Invite.css";
 
 const Invite: React.FC = () => {

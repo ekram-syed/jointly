@@ -1,4 +1,5 @@
 import React from "react";
+
 import {
   IonContent,
   IonHeader,
@@ -8,9 +9,20 @@ import {
   IonButtons,
   IonButton,
   IonIcon,
-  IonLabel, IonCard, IonImg, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent, IonText
+  IonCard,
+  IonImg,
+  IonCardHeader,
+  IonCardTitle,
+  IonCardSubtitle,
+  IonCardContent,
+  IonText,
 } from "@ionic/react";
-import { pin, wifi, wine, warning, walk, flowerOutline, personCircleOutline, createOutline } from "ionicons/icons";
+
+import { 
+  personCircleOutline, 
+  createOutline 
+} from "ionicons/icons";
+
 import "./Profile.css";
 
 const Profile: React.FC = () => {
@@ -26,26 +38,28 @@ const Profile: React.FC = () => {
           <IonTitle className="no-left-padding no-weight">Profile</IonTitle>
         </IonToolbar>
       </IonHeader>
+
       <IonContent>
         <IonCard>
           <IonImg className="profileImage" src="./assets/avatar.svg"></IonImg>
+
           <IonCardHeader>
             <IonCardTitle>
               <IonText>Emon Ekram </IonText>
-              <IonIcon className="ion-padding-start"  icon={createOutline}></IonIcon>
+              <IonIcon
+                className="ion-padding-start"
+                icon={createOutline}
+              />
             </IonCardTitle>
-            <IonCardSubtitle>
-                JOINED: April 20, 2020
-            </IonCardSubtitle>
-            <IonCardSubtitle>
-                BIRTHDAY: April 20, 1985
-            </IonCardSubtitle>
-            <IonCardSubtitle>
-                EMAIL: emon@email.com
-            </IonCardSubtitle>
-            <IonCardContent>
-               
-            </IonCardContent>
+
+            <IonCardSubtitle>JOINED: April 20, 2020</IonCardSubtitle>
+
+            <IonCardSubtitle>BIRTHDAY: April 20, 1985</IonCardSubtitle>
+
+            <IonCardSubtitle>EMAIL: emon@email.com</IonCardSubtitle>
+
+            <IonCardContent></IonCardContent>
+            
           </IonCardHeader>
         </IonCard>
       </IonContent>

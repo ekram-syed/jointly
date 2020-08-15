@@ -28,6 +28,13 @@ import './theme/variables.css';
 import Forget from './pages/Forget';
 import Profile from './pages/Profile';
 
+
+// if (typeof window.ethereum !== 'undefined' || (typeof window.web3 !== 'undefined')) {
+
+//   // Web3 browser user detected. You can now use the provider.
+//   //const provider = window['ethereum'] || window.web3.currentProvider
+// }
+
 const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>

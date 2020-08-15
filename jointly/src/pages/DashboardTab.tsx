@@ -19,24 +19,18 @@ import {
   IonImg,
   IonBadge,
   IonChip,
-  IonList,
-  IonListHeader,
 } from "@ionic/react";
 import {
-  pin,
-  wifi,
-  wine,
-  warning,
-  walk,
   homeOutline,
   bonfireOutline,
   flowerOutline,
   arrowUpCircleOutline,
   gitMergeOutline,
   personAddOutline,
-  addCircleOutline
 } from "ionicons/icons";
 import "./DashboardTab.css";
+import Home from "./Home";
+
 
 const DashboardTab: React.FC = () => {
   return (
@@ -51,6 +45,7 @@ const DashboardTab: React.FC = () => {
           <IonTitle className="no-left-padding no-weight">Home</IonTitle>
         </IonToolbar>
       </IonHeader>
+
       <IonContent>
         <IonCard color="primary">
           <IonCardHeader>
@@ -125,12 +120,10 @@ const DashboardTab: React.FC = () => {
               </IonChip>
             </IonItem>
 
-            
-              <IonButton expand="block" color="primary">
-                <IonIcon slot="start" icon={personAddOutline}></IonIcon>
-                Invite
-              </IonButton>
-          
+            <IonButton expand="block" color="primary">
+              <IonIcon slot="start" icon={personAddOutline}></IonIcon>
+              Invite
+            </IonButton>
           </IonCardContent>
         </IonCard>
       </IonContent>

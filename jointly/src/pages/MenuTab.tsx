@@ -12,18 +12,11 @@ import {
   IonLabel,
 } from "@ionic/react";
 import {
-  menuOutline,
-  pin,
-  wifi,
-  wine,
-  warning,
-  walk,
   filterOutline,
   personCircleOutline,
   walletOutline,
   clipboardOutline,
   logOutOutline,
-  repeatOutline,
 } from "ionicons/icons";
 import "./MenuTab.css";
 

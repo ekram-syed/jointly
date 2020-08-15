@@ -8,9 +8,14 @@ import {
   IonButtons,
   IonButton,
   IonIcon,
-  IonLabel, IonCard, IonImg
+  IonCard,
+  IonImg,
 } from "@ionic/react";
-import { pin, wifi, wine, warning, walk, flowerOutline } from "ionicons/icons";
+
+import { 
+  flowerOutline 
+} from "ionicons/icons";
+
 import "./FlowerTab.css";
 
 const FlowerTab: React.FC = () => {
